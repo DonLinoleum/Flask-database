@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="view" content="width=device-width">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="{{url_for('static',filename='style/style.css' )}}">
+</head>
+<body>
+<!--Верхняя панель -->
+<header>
+	<img id="logo" src="{{url_for('static', filename='img/logo.png')}}">
+	<h1>База оборудования</h1>
+</header>
+{% block main %}
+{% endblock %}
+<!--Футер -->
+<footer>
+<p id="footer">г.Благовещенск, ул.Политехническая, 144<br>
+	   Работаем с 9:00 до 21:00 <br>
+	   mail@gorodok1.ru <br>
+</p>
+</footer>
+<script src="{{url_for('static', filename='js/js.js')}}"></script>
+</body>
+</html>

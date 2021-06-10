@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}
+База оборудования
+{% endblock %}
+
+{% block main %}
+<!--Основная панель -->
+<main>
+	<article>
+<!--Div с ошибкой -->
+	<div id="warning">
+	</div>
+<!--Div с SNR -->
+	<div id="SNR">
+	<h1>SNR в наличии</h1>
+	<ol>
+	{% for el in Snr %}
+		<li>
+			Модель : <b>{{el.model}}</b>, S/N : <b>{{el.serial}}</b>>
+			<input name='snr' class='radio' type='radio' value={{el.id}} />
+		</li><hr>
+	{% endfor %}
+	</ol>
+	<hr class='hr'>
+    </div>
+<!--Div с SNR аренда -->
+	<div id="SNR_ARENDA">
+	<h1>SNR в аренде</h1>
+	<ol>
+	{% for el in Snr_arenda %}
+		<li>
+			Модель : <b>{{el.model}}</b>, S/N : <b>{{el.serial}}</b>>
+			<br> Номер Договора : <b>{{el.nomer}}</b>, Адрес : <b>{{el.address}}</b> 
+			<input name='snr_arenda' class='radio' type='radio' value={{el.id}} />
+		</li><hr>
+	{% endfor %}
+	</ol>
+	<hr class='hr'>
+
+    </div>
+<!--Div с STB -->	
+	<div id="STB">
+	<h1>STB в наличии</h1>
+	<ol>
+	{% for el in Stb %}
+		<li>
+			Модель : <b>{{el.model}}</b>, S/N : <b>{{el.serial}}</b>>
+			<input name='stb' class='radio' type='radio' value={{el.id}} />
+		</li>
+	<hr>
+	{% endfor%}
+	</ol>
+	<hr class='hr'>
+    </div> 
+<!--Div с STB аренда -->	
+	<div id="STB_ARENDA">
+	<h1>STB в аренде</h1>
+	<ol>
+	{% for el in Stb_arenda %}
+		<li>
+			Модель : <b>{{el.model}}</b>, S/N : <b>{{el.serial}}</b>>
+			<br> Номер Договора : <b>{{el.nomer}}</b>, Адрес : <b>{{el.address}}</b> 
+			<input name='stb_arenda' class='radio' type='radio' value={{el.id}} />
+		</li><hr>
+	{% endfor %}
+	</ol>
+	<hr class='hr'>
+    </div> 
+	
+	</article>
+<!--Левая панель -->
+	<nav>
+		<img src="{{url_for('static',filename='img/route.png')}}" id="routeImg">
+		<a class="links" id="SnrButton">SNR</a>
+		<a class="links" id="StbButton">STB </a>
+		<img src="{{url_for('static',filename='img/tv.png')}}" id="tvImg">
+	</nav>
+<!--Правая панель -->
+	<aside>
+		<div id="Buttons">
+		<div id="ButtonsInArenda">
+		<p><button class="button" id="AddButton">Добавить</button></p>
+		<p><button class="button" id="DelButton">Удалить</button></p>
+		</div>
+		<div id="ButtonsFromArenda">
+		<p><button class="button arenda" id="ArendaButton">Добавить в аренду</button></p>
+		<p><button class="button arenda" id="DelArendaButton">Убрать из аренды</button></p>
+		</div>
+		</div>
+		
+	</aside>
+</main>
+
+{% endblock %}

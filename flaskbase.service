@@ -1,0 +1,11 @@
+[Unit]
+Description=Flask base
+
+[Service]
+Type=simple
+WorkingDirectory=/var/FlaskBase
+ExecStart=/usr/bin/python3 /usr/local/bin/gunicorn -w 3 -b 10.0.0.60:80 main:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

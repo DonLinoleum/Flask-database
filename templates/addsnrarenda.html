@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление SNR в аренду
+{% endblock %}
+
+{% block main %}
+<main>
+
+	<article>
+	<h1>Добавление SNR в аренду</h1>
+	<form method='POST'>
+	<p><input type='hidden' name='id' value='$id'></p>
+	<p>Номер Договора: </p><input type='text' name='nomer' size='50' required />
+	<p>Адрес: </p><input type='text' name='address' size='50' required />
+	<hr class='hr'>
+	<button class='button' type='submit'>Добавить</button>	
+	</form>
+    </article>
+	
+	<nav>
+		
+	</nav>
+	<aside>
+		
+	</aside>
+</main>
+{% endblock %}

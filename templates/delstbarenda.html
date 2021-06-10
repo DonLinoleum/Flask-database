@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Удаление STB в аренды
+{% endblock %}
+
+{% block main %}
+<main>
+
+	<article>
+	<h1>Убрать STB из аренды?</h1>
+	<form method='POST'>
+		<input type='hidden' name='id' value={{Id}}/>
+		<input type='submit' class='button' id='delButton' value='Убрать'>
+	</form>
+    </article>
+	
+	<nav>
+		
+	</nav>
+	<aside>
+		
+	</aside>
+</main>
+{% endblock %}

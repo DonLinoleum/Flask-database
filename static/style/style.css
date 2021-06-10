@@ -1,0 +1,333 @@
+/*Внешний шрифт */
+@font-face
+{
+	font-family: 'Lobster';
+	src: url('18408.ttf');
+}
+@font-face
+{
+	font-family: 'Inter';
+	src: url('20708.otf');
+}
+
+/*Общие стили */
+* {
+	box-sizing: border-box;
+  }
+html,body {
+	padding:0; 
+	margin:0; 
+	font-family:verdana,arial,sans-serif;
+	font-size: 22px;
+	}
+
+body{
+	background-color: #37474f;
+	font-size: 1.1 em;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	
+	}
+main {
+	display: flex;
+	flex-direction: column;
+}
+article {
+	
+	background-color: #BCD1FF;
+	padding: 1em;
+	flex: 2 2 50em;
+	font-family: Inter;
+	font-size:22px;
+}
+/* Div с ошибкой */
+#warning
+{
+	display: block;
+	margin-top: -0.5em;
+	margin-bottom: -1em;
+	height: 1em;
+	text-align: center;
+	opacity: 0;
+	color: #d44208;
+	transition: opacity 1s;
+	
+}
+
+nav,aside {
+	flex: 1 1 1em;
+	background-color: #455a64;
+	color: #fff;
+}
+
+nav {
+	order: -1;
+	display: flex;
+}
+
+aside 
+{
+	display: flex;	
+}
+header, footer {
+	flex: 0 0 5em;
+	background-color: #37474f;
+	color: #fff;	
+	}
+h1 
+{
+	font-family: Lobster;
+	font-size: 2em;
+	text-align: center;
+}
+.hr
+{
+	background-color: #0B08B3;
+	height: 15px;
+	border-radius:20px;
+}
+li:nth-child(4n+1)
+{
+	background-color:#A8C8FF;
+}
+.radio
+{
+	display:flex;
+	border:0px;
+	width: 5%;
+    	height: 2em;
+	
+}
+input[type="text"]
+{
+	height:3em;
+	border: 2px solid #A8C8FF;
+}
+
+/* Стили логотипа */
+#logo
+{	
+	display:flex;
+	margin:1em auto;
+	height:5em;
+	width: 7em;
+}
+/*Стили с левой стороны (Кнопки выбора оборудования) */
+.links
+{	
+	margin:1em auto;
+	font-size: 2em;
+}
+.links:hover
+{
+	color: #c7c1c1;
+	cursor:pointer;
+}
+#routeImg
+{
+	display:flex;
+	height: 5em;
+	width: 7em;	
+	margin: 1em auto;	
+}
+#tvImg
+{
+	display:flex;
+	height: 5em;
+	width: 7em;	
+	margin: 1em auto;
+}
+
+/*Div со списком SNR   */
+#SNR 
+{
+	display:block;
+}
+/*Div со списком STB   */
+#STB
+{
+	display:none;
+}
+/* Div со списком SNR в аренде */
+#SNR_ARENDA
+{
+	display:block;
+}
+/* Div со списком STB в аренде */
+#STB_ARENDA
+{
+	display:none;
+}
+
+/*Div с кнопками справа   */
+#Buttons
+{
+	display:block;
+	margin: 0 auto;
+}
+/*Кнопка Добавить В Аренду  */
+#ButtonsInArenda
+{
+	display:flex;
+}
+/*Кнопка Убрать Из Аренды  */
+#ButtonsFromArenda
+{
+	display:flex;
+}
+/* Стили кнопок справа */
+.button
+{
+	border-radius:8px;
+	font-size:1.2em;
+	height:65px;
+	width: 170px;
+	user-select: none;
+	color: #fff;
+	display: flex;
+	background: rgb(212,75,56);
+	padding: .5em 1em ;
+	margin-left: 1em;
+}
+.button:hover
+{
+	background: rgb(232,95,76);
+}
+.button:active
+{
+	 background: rgb(152,15,0);
+}
+.arenda
+{
+	padding-top:0.2em;
+	background-color: #54572a;
+	height:4em;	
+}
+.arenda:hover
+{
+	background-color: #767855;
+}
+.arenda:active
+{
+	background-color: #343625;
+}
+
+/* Кнока удаления */
+#delButton
+{
+	margin: 0 auto;
+}
+
+
+#footer 
+{
+	text-align: center;
+}
+
+
+/* Стили для больших экранов */
+@media screen and (min-width:990px)
+{
+	body
+	{
+		min-height: 100vh;
+		font-size: 16px;
+	}
+	main
+	{
+		flex-direction: row;
+		min-height: 100%;
+		flex: 1 1 auto;
+	}
+	article
+	{
+		font-family: Inter;
+		font-size:18px;
+
+	}
+	.links
+	{
+		display: block;
+		width:80px;
+		margin: 1em auto;
+	}
+	nav{
+		display: block;
+		
+	}
+	.radio
+	{
+		display:inline-flex;
+    		height:15px;
+	}
+
+	#Buttons
+	{
+		display:block;
+		margin: 0 auto;
+	}
+	#ButtonsInArenda
+	{
+		display:block;
+	}
+	#ButtonsFromArenda
+	{
+		display:block;
+	}
+	#SNR 
+	{
+		display:block;
+	
+	}
+	#STB
+	{
+		display:none;	
+	}
+/* Стили кнопок слева для больших экранов */	
+	.button
+	{
+		border-radius:8px;
+		font-size:1.2em;
+		height:50px;
+		width: 130px;
+		user-select: none;
+		color: #fff;
+		display: flex;
+		background: rgb(212,75,56);
+		padding: .5em 1em ;
+		margin-left: 0em;
+	}
+		.button:hover
+	{
+		background: rgb(232,95,76);
+	}
+		.button:active
+	{
+	 	background: rgb(152,15,0);
+	}
+	.arenda
+	{
+		padding-top:0.2em;
+		background-color: #54572a;
+		height:3em;	
+	}
+	.arenda:hover
+	{
+		background-color: #767855;
+	}
+	.arenda:active
+	{
+		background-color: #343625;
+	}	
+
+
+
+
+
+
+
+
+
+

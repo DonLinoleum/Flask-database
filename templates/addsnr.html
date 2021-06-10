@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Добавление SNR
+{% endblock %}
+
+{% block main %}
+<main>
+
+	<article>
+	<h1>Добавление SNR</h1>
+	<form method="post">
+	<p>Модель: </p><input type="text" name="name" size="50" required />
+	<p>Серийный номер: </p><input type="text" name="serial" size="50" required />
+	<hr class='hr'>
+	<button class="button" type="submit">Добавить</button>	
+	</form>
+                
+	</article>
+	<nav>
+		
+		
+	</nav>
+	<aside>
+		
+	</aside>
+</main>
+{% endblock %}
